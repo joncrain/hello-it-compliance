@@ -1,28 +1,25 @@
 #!/bin/bash
-
 # Gatekeeper check
+. "$HELLO_IT_SCRIPT_SH_LIBRARY/com.github.ygini.hello-it.scriptlib.sh"
 
-GATEKEEPER_CHECK=$(/usr/sbin/spctl --status)
+function onClickAction {
+  /usr/bin/open -b com.apple.systempreferences /System/Library/PreferencePanes/Security.prefPane
+}
 
-if [ "$GATEKEEPER_CHECK" = "assessments enabled" ];
-then
-	GATEKEEPER="Enabled"
-	echo "hitp-enabled: YES"
-	echo "hitp-hidden: NO"
-	echo "hitp-title: Gatekeeper : $GATEKEEPER"
-else
-	echo "hitp-enabled: NO"
-	echo "hitp-hidden: NO"
-	echo "hitp-title: Gatekeeper : Disabled"
-fi
+function setTitleAction {
+    GATEKEEPER_CHECK=$(/usr/sbin/spctl --status)
 
-# All Checks
+    if [[ "$GATEKEEPER_CHECK" = "assessments enabled" ]];
+    then
+    updateState "${STATE[0]}"
+    GATEKEEPER="Enabled"
+    else
+    updateState "${STATE[2]}"
+    GATEKEEPER="Disabled"
+    fi
+    updateTitle "Gatekeeper : $GATEKEEPER"
+}
 
-if [[ $GATEKEEPER = "" ]];
-then
-	echo "hitp-state: error"
-else
-	echo "hitp-state: ok"
-fi
+main "$@"
 
 exit 0
