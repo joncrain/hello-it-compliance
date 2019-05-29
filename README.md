@@ -16,8 +16,8 @@ To utilize, add the scripts to `/Library/Application Support/com.github.ygini.he
                         <string>public.script.item</string>
                         <key>settings</key>
                         <dict>
-                            <key>path</key>
-                            <string>/Library/Application Support/com.github.ygini.hello-it/CustomScripts/gatekeeper_check.sh</string>
+                            <key>script</key>
+                            <string>gatekeeper_check.sh</string>
                             <key>title</key>
                             <string>gatekeeper_check</string>
                         </dict>
@@ -26,9 +26,31 @@ To utilize, add the scripts to `/Library/Application Support/com.github.ygini.he
                         <key>functionIdentifier</key>
                         <string>public.script.item</string>
                         <key>settings</key>
+                            <dict>
+                                <key>script</key>
+                                <string>updates_info.sh</string>
+                                <key>title</key>
+                                <string>UpdateInfo</string>
+                            </dict>
+                    </dict>
+                    <dict>
+                        <key>functionIdentifier</key>
+                        <string>public.script.item</string>
+                        <key>settings</key>
                         <dict>
-                            <key>path</key>
-                            <string>/Library/Application Support/com.github.ygini.hello-it/CustomScripts/sip_check.sh</string>
+                            <key>script</key>
+                            <string>filevault.sh</string>
+                            <key>title</key>
+                            <string>filevault_check</string>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>functionIdentifier</key>
+                        <string>public.script.item</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>script</key>
+                            <string>sip_check.sh</string>
                             <key>title</key>
                             <string>sip_check</string>
                         </dict>
@@ -38,8 +60,8 @@ To utilize, add the scripts to `/Library/Application Support/com.github.ygini.he
                         <string>public.script.item</string>
                         <key>settings</key>
                         <dict>
-                            <key>path</key>
-                            <string>/Library/Application Support/com.github.ygini.hello-it/CustomScripts/polp_check.sh</string>
+                            <key>script</key>
+                            <string>polp_check.sh</string>
                             <key>title</key>
                             <string>polp_check</string>
                         </dict>
@@ -49,10 +71,23 @@ To utilize, add the scripts to `/Library/Application Support/com.github.ygini.he
                         <string>public.script.item</string>
                         <key>settings</key>
                         <dict>
-                            <key>path</key>
-                            <string>/Library/Application Support/com.github.ygini.hello-it/CustomScripts/firewall_check.sh</string>
+                            <key>script</key>
+                            <string>firewall_check.sh</string>
                             <key>title</key>
                             <string>firewall_check</string>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>functionIdentifier</key>
+                        <string>public.script.item</string>
+                        <key>settings</key>
+                        <dict>
+                            <key>periodic-run</key>
+                            <integer>3600</integer>
+                            <key>script</key>
+                            <string>detectx.sh</string>
+                            <key>title</key>
+                            <string>detectx</string>
                         </dict>
                     </dict>
                 </array>
