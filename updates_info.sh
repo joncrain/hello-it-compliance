@@ -1,5 +1,6 @@
 #!/bin/bash
 # Pending Updates Script for Managed Software Center
+# Borrowed from WardsParadox
 ### The following line load the Hello IT bash script lib
 . "$HELLO_IT_SCRIPT_SH_LIBRARY/com.github.ygini.hello-it.scriptlib.sh"
 
