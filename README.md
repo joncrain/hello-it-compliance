@@ -1,5 +1,5 @@
 # hello-it-compliance
-Compliance Checks for Hello-IT
+Compliance Checks for [Hello-IT](https://github.com/ygini/Hello-IT)
 
 To utilize, add the scripts to `/Library/Application Support/com.github.ygini.hello-it/CustomScripts/` and add the following dict to `/Library/Preferences/com.github.ygini.hello-it.plist` (or whatever configuration file you have made)
 
